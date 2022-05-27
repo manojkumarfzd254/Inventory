@@ -1,0 +1,40 @@
+<%- include('includes/header')%>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="white_card card_height_100 mb_30">
+            <div class="white_card_header">
+                <div class="box_header m-0">
+                    <div class="main-title">
+                        <h3 class="m-0">Edit Type</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="white_card_body">
+                <form action="/admin/edit_type" method="post">
+                    <input type="hidden" name="_id" id="" value="<%=row._id%>">
+                    <div class="form-row align-items-center">
+                       
+                        <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInputGroup">Type Name</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-edit"></i></div>
+                                </div>
+                                <input type="text" name="type_name" value="<%=row.type_name%>" class="form-control" id="inlineFormInputGroup" placeholder="Enter Type Name">
+                            </div>
+                        </div>
+                        
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-2">Save</button>
+                        </div>
+                    </div>
+                </form>
+            
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('includes/footer')%>

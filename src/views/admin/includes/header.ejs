@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<!-- Mirrored from demo.dashboardpack.com/cryptocurrency-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jan 2022 12:08:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title><%=title%></title>
+
+    <link rel="icon" href="/theme/img/mini_logo.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" />
+    <!-- themefy CSS -->
+    <link rel="stylesheet" href="/theme/vendors/themefy_icon/themify-icons.css" />
+    <!-- select2 CSS -->
+    <link rel="stylesheet" href="/theme/vendors/niceselect/css/nice-select.css" />
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="/theme/vendors/owl_carousel/css/owl.carousel.css" />
+    <!-- gijgo css -->
+    <link rel="stylesheet" href="/theme/vendors/gijgo/gijgo.min.css" />
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="/theme/vendors/font_awesome/css/all.min.css" />
+    <link rel="stylesheet" href="/theme/vendors/tagsinput/tagsinput.css" />
+
+    <!-- date picker -->
+     <link rel="stylesheet" href="/theme/vendors/datepicker/date-picker.css" />
+
+     <link rel="stylesheet" href="/theme/vendors/vectormap-home/vectormap-2.0.2.css" />
+     
+     <!-- scrollabe  -->
+     <link rel="stylesheet" href="/theme/vendors/scroll/scrollable.css" />
+    <!-- datatable CSS -->
+    <link rel="stylesheet" href="/theme/vendors/datatable/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="/theme/vendors/datatable/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" href="/theme/vendors/datatable/css/buttons.dataTables.min.css" />
+    <!-- text editor css -->
+    <link rel="stylesheet" href="/theme/vendors/text_editor/summernote-bs4.css" />
+    <!-- morris css -->
+    <link rel="stylesheet" href="/theme/vendors/morris/morris.css">
+    <!-- metarial icon css -->
+    <link rel="stylesheet" href="/theme/vendors/material_icon/material-icons.css" />
+
+    <!-- menu css  -->
+    <link rel="stylesheet" href="/theme/css/metisMenu.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/theme/css/style.css" />
+    <link rel="stylesheet" href="/theme/css/colors/default.css" id="colorSkinCSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://manojshankhwar.co.in/cdn/admin_dash.css">
+    
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.css"/>  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    var base_url = "localhost:3000/";
+</script>
+<style>
+    .label {
+    display: inline;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+}
+
+.label {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.model_full_wdith{
+    max-width:90%!important
+}
+</style>
+</head>
+<body class="crm_body_bg">
+    
+
+
+<!-- main content part here -->
+ 
+ <!-- sidebar  -->
+<nav class="sidebar dark_sidebar">
+    <div class="logo d-flex justify-content-between">
+        <a class="large_logo" href="index-2.html"><img src="/theme/img/logo_white.png" alt=""></a>
+        <a class="small_logo" href="index-2.html"><img src="/theme/img/mini_logo.png" alt=""></a>
+        <div class="sidebar_close_icon d-lg-none">
+            <i class="ti-close"></i>
+        </div>
+    </div>
+    <ul id="sidebar_menu">
+      <li class="">
+        <a  href="/admin/dashboard" aria-expanded="false">
+          <div class="nav_icon_small">
+            <img src="/theme/img/menu-icon/1.svg" alt="">
+        </div>
+        <div class="nav_title">
+            <span>Dashboard</span>
+        </div>
+        </a>
+    </li>
+    <li class="">
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="nav_icon_small">
+              <img src="/theme/img/menu-icon/General.svg" alt="">
+          </div>
+          <div class="nav_title">
+              <span>Setup</span>
+          </div>
+        </a> 
+        <ul class="mm-collapse">
+          <li><a href="/admin/types">Types</a></li>
+          <li><a href="/admin/sub_type">Sub Types</a></li>
+          <li><a href="/admin/products">Products</a></li>
+        </ul>
+    </li>
+
+    <li class="">
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="nav_icon_small">
+              <img src="/theme/img/menu-icon/General.svg" alt="">
+          </div>
+          <div class="nav_title">
+              <span>Orders</span>
+          </div>
+        </a> 
+        <ul class="mm-collapse">
+          <li><a href="/orders/create">Create Order</a></li>
+          <li><a href="/orders/list">Manage Orders</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="nav_icon_small">
+              <img src="/theme/img/menu-icon/General.svg" alt="">
+          </div>
+          <div class="nav_title">
+              <span>Manage Stock</span>
+          </div>
+        </a> 
+        <ul class="mm-collapse">
+          <li><a href="/stock/stock_entry">Stock Entry After Order</a></li>
+          <li><a href="/stock/manage">Manage Orders</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="nav_icon_small">
+              <img src="/theme/img/menu-icon/General.svg" alt="">
+          </div>
+          <div class="nav_title">
+              <span>Vendors</span>
+          </div>
+        </a> 
+        <ul class="mm-collapse">
+          <li><a href="/vendors/create">Create Vendor</a></li>
+          <li><a href="/vendors/list">List Vendor</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a  href="/company" aria-expanded="false">
+          <div class="nav_icon_small">
+            <img src="/theme/img/menu-icon/1.svg" alt="">
+        </div>
+        <div class="nav_title">
+            <span>Company</span>
+        </div>
+        </a>
+    </li>
+    <li class="">
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="nav_icon_small">
+              <img src="/theme/img/menu-icon/General.svg" alt="">
+          </div>
+          <div class="nav_title">
+              <span>Files AWS Bucket</span>
+          </div>
+        </a> 
+        <ul class="mm-collapse">
+          <li><a href="/files/upload">Upload</a></li>
+          <li><a href="/files/manage">Manage</a></li>
+        </ul>
+    </li>
+    </ul>
+</nav>
+ <!--/ sidebar  -->
+
+
+<section class="main_content dashboard_part large_header_bg">
+    <!-- menu  -->
+    <div class="container-fluid no-gutters">
+      <div class="row">
+          <div class="col-lg-12 p-0 ">
+              <div class="header_iner d-flex justify-content-between align-items-center">
+                  <div class="sidebar_icon d-lg-none">
+                      <i class="ti-menu"></i>
+                  </div>
+                  <div class="line_icon open_miniSide d-none d-lg-block">
+                      <img src="/theme/img/line_img.png" alt="">
+                  </div>
+                  <div class="header_right d-flex justify-content-between align-items-center">
+                      <div class="header_notification_warp d-flex align-items-center">
+                          <li>
+                              <a class="CHATBOX_open nav-link-notify" href="#"> <img src="/theme/img/icon/msg.svg" alt="">   </a>
+                          </li>
+                          <li>
+                              <a class="bell_notification_clicker nav-link-notify" href="#"> <img src="/theme/img/icon/bell.svg" alt="">
+                                  <!-- <span>2</span> -->
+                              </a>
+                              <!-- Menu_NOtification_Wrap  -->
+                          <div class="Menu_NOtification_Wrap">
+                              <div class="notification_Header">
+                                  <h4>Notifications</h4>
+                              </div>
+                              <div class="Notification_body">
+                                  <!-- single_notify  -->
+                                  <div class="single_notify d-flex align-items-center">
+                                      <div class="notify_thumb">
+                                          <a href="#"><img src="/theme/img/staf/2.png" alt=""></a>
+                                      </div>
+                                      <div class="notify_content">
+                                          <a href="#"><h5>Cool Marketing </h5></a>
+                                          <p>Lorem ipsum dolor sit amet</p>
+                                      </div>
+                                  </div>
+                                  <!-- single_notify  -->
+                                  <div class="single_notify d-flex align-items-center">
+                                      <div class="notify_thumb">
+                                          <a href="#"><img src="/theme/img/staf/4.png" alt=""></a>
+                                      </div>
+                                      <div class="notify_content">
+                                          <a href="#"><h5>Awesome packages</h5></a>
+                                          <p>Lorem ipsum dolor sit amet</p>
+                                      </div>
+                                  </div>
+                                  <!-- single_notify  -->
+                                  <div class="single_notify d-flex align-items-center">
+                                      <div class="notify_thumb">
+                                          <a href="#"><img src="/theme/img/staf/3.png" alt=""></a>
+                                      </div>
+                                      <div class="notify_content">
+                                          <a href="#"><h5>what a packages</h5></a>
+                                          <p>Lorem ipsum dolor sit amet</p>
+                                      </div>
+                                  </div>
+                                  <!-- single_notify  -->
+                                  <div class="single_notify d-flex align-items-center">
+                                      <div class="notify_thumb">
+                                          <a href="#"><img src="/theme/img/staf/2.png" alt=""></a>
+                                      </div>
+                                      <div class="notify_content">
+                                          <a href="#"><h5>Cool Marketing </h5></a>
+                                          <p>Lorem ipsum dolor sit amet</p>
+                                      </div>
+                                  </div>
+                                  <!-- single_notify  -->
+                                  <div class="single_notify d-flex align-items-center">
+                                      <div class="notify_thumb">
+                                          <a href="#"><img src="/theme/img/staf/4.png" alt=""></a>
+                                      </div>
+                                      <div class="notify_content">
+                                          <a href="#"><h5>Awesome packages</h5></a>
+                                          <p>Lorem ipsum dolor sit amet</p>
+                                      </div>
+                                  </div>
+                                  <!-- single_notify  -->
+                                  <div class="single_notify d-flex align-items-center">
+                                      <div class="notify_thumb">
+                                          <a href="#"><img src="/theme/img/staf/3.png" alt=""></a>
+                                      </div>
+                                      <div class="notify_content">
+                                          <a href="#"><h5>what a packages</h5></a>
+                                          <p>Lorem ipsum dolor sit amet</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="nofity_footer">
+                                  <div class="submit_button text-center pt_20">
+                                      <a href="#" class="btn_1 green">See More</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--/ Menu_NOtification_Wrap  -->
+                          </li>
+                          
+                      </div>
+                      <div class="profile_info d-flex align-items-center">
+                          <div class="profile_thumb mr_20">
+                              <img src="/theme/img/transfer/4.png" alt="#">
+                          </div>
+                          <div class="author_name">
+                              <h4 class="f_s_15 f_w_500 mb-0">Jiue Anderson</h4>
+                              <p class="f_s_12 f_w_400">Manager</p>
+                          </div>
+                          <div class="profile_info_iner">
+                              <div class="profile_author_name">
+                                  <p>Manager</p>
+                                  <h5>Jiue Anderson</h5>
+                              </div>
+                              <div class="profile_info_details">
+                                  <a href="#">My Profile </a>
+                                  <a href="#">Settings</a>
+                                  <a href="/admin/logout" onclick="return confirm('Are you sure to logout?')">Log Out </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!--/ menu  -->
+  <div class="main_content_iner overly_inner " style="overflow-x: hidden;">
+      <div class="container-fluid p-0 ">
