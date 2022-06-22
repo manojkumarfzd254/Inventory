@@ -1,0 +1,84 @@
+<%-include('includes/header') %>
+ 
+    <div class="row" id="box_product" style="margin-top: 30px;">
+        <div class="box box-success">
+            <div class="box-header">Add Product</div>
+            <div class="box-body">
+                <form action="/admin/update_product" method="post" class="row">
+                    <input type="hidden" name="_id" value="<%=row._id%>">
+                    <div class="form-group col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <label for="">Select Type</label>
+                        <select name="type_id" id="" class="form-control get_sub_type" required>
+                            <option value="">-- Select Type --</option>
+                            <%
+                                var typeId = row.type_id;
+                                types.forEach(function(t)
+                                {   
+                                    sel = (t._id == ""+typeId)?"selected":"";
+                                        %>
+                                        <option value="<%=t._id%>" <%=sel%>><%=t.type_name%></option>
+                                        <%
+                                });
+                            %>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <label for="">Sub Type <span id="Loading"></span></label>
+                        <select name="sub_type_id" id="set_sub_type" class="form-control" required>
+                            <%
+                                var subTypeId = row.sub_type_id;
+                                sub_types.forEach(function(st)
+                                {   
+                                    sel2 = (st._id == ""+subTypeId)?"selected":"";
+                                        %>
+                                        <option value="<%=st._id%>" <%=sel2%>><%=st.sub_type_name%></option>
+                                        <%
+                                });
+                            %>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <label for="">Product Name</label>
+                        <input type="text" class="form-control" value="<%=row.product_name%>" name="product_name" id="">
+                    </div>
+                    <div class="form-group col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <label for="">Product Rate</label>
+                        <input type="text" class="form-control" value="<%=row.rate%>" name="rate" id="">
+                    </div>
+                    <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <button class="btn btn-success fa fa-save"> Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<%-include('includes/footer') %>
+<script>
+    $("#add_product_box").click(function(){
+        $("#box_product").toggle(500);
+    });
+    $(".get_sub_type").change(function(){
+        //alert($(this).val());
+        $typeId = $(this).val();
+        $.ajax({
+                    url : "/admin/get_type_by_ajax",
+                    type : "post",
+                    data : {type_id :$typeId},
+                    dataType : "json",
+                    beforeSend:function(){
+                        $("#Loading").html('<i class="text-danger"><i class="fa fa-refresh fa-spin"></i> Please wait...</i>');
+                    },
+                    success:function($res){
+                        console.log($res);
+                        $("#set_sub_type").html($res.content);
+                    },
+                    complete:function(){
+                        $("#Loading").html('<i class="text-success"><i class="fa fa-check-circle"></i> Complete.</i>');
+                    },
+                    error:function(a,b,c){
+                        console.log(a.responseText);
+                    }
+        });
+    });
+</script>

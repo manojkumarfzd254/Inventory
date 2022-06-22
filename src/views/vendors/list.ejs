@@ -1,0 +1,47 @@
+<%-include('../admin/includes/header') %>
+
+    <div class="row">
+        <div class="box box-success">
+            <div class="box-header"><i class="fa fa-list"></i> List Vendor</div>
+            <div class="box-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Vendor Name</th>
+                                <th>Email</th>
+                                <th>Mobile No.</th>
+                                <th>Address</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% let count = 1; %>
+                            <% list.forEach(function(row) { 
+                               
+                                %>
+                                
+                                <tr>
+                                    <td><%=count++%></td>
+                                    <td><%= new Date(row.created_on).toLocaleDateString() %></td>
+                                    <td><%= row.vendor_name %></td> 
+                                    <td><%= row.vendor_email %></td>
+                                    <td><%= row.vendor_mobile %></td>
+                                    <td><%= row.vendor_address %></td>
+                                    <td>
+                                        <a href="/vendors/edit/<%=row._id%>" class="btn btn-success fa fa-edit"></a>
+                                        <a href="/vendors/delete/<%=row._id%>" class="btn btn-danger fa fa-trash" onclick="return confirm('Are you sure to Delete this Vendor ?')"></a>
+                                    </td>
+                                
+                                </tr>
+                             <% }); %> 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%-include('../admin/includes/footer') %>
