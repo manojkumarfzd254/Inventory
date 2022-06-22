@@ -10,7 +10,7 @@ const Company = require("./routers/Company");
 const Vendors = require("./routers/Vendor");
 const Stock = require("./routers/Stock");
 const Files = require("./routers/Files");
-
+  
 const flash = require('connect-flash');
 const session = require('express-session');
 cookieParser = require('cookie-parser');
